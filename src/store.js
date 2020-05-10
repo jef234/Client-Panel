@@ -3,7 +3,8 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 import 'firebase/database'
-import { reduxFirestore, firestoreReducer } from 'redux-firestore'
+import { reactReduxFirebase, firebaseReducer } from 'react-redux-firebase'
+import { reduxFirestore, firestoreReducer, createFirestoreInstance } from 'redux-firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyAS_Y1ffT4ObeMy6c74dvBEPTETU3qyNRs",
@@ -18,20 +19,22 @@ const firebaseConfig = {
 //react-redux-firebase configuration
 const rrfConfig = {
     userProfile: 'users',
-    useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+    //useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
 }
 
 //Init firebase instance
 firebase.initializeApp(firebaseConfig)
 //Init firestore
-const firestore = firebase.firestore()
+firebase.firestore()
 
 //Add reactReduxFirebase enhancer when making store creator
-const createStoreWithFirebase = compose(
-    reduxFirestore(firebase, rrfConfig)
-)(createStore)
+// const createStoreWithFirebase = compose(
+//     // reactReduxFirebase(firebase, rrfConfig),
+//     reduxFirestore(firebase, rrfConfig)
+// )(createStore)
 
 const rootReducer = combineReducers({
+    firebase: firebaseReducer,
     firestore: firestoreReducer
 })
 
@@ -39,9 +42,22 @@ const rootReducer = combineReducers({
 const initialState = {};
 
 //Create store
-const store = createStoreWithFirebase(
+// const store = createStoreWithFirebase(
+//     rootReducer,
+//     initialState
+//     // compose(reactReduxFirebase(firebase), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// )
+
+export let store = createStore(
     rootReducer,
-    initialState
+    initialState,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    // compose(reactReduxFirebase(firebase), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 )
 
-export default store
+export let rrfProps = {
+    firebase,
+    config: rrfConfig,
+    dispatch: store.dispatch,
+    createFirestoreInstance // <- needed if using firestore
+  }

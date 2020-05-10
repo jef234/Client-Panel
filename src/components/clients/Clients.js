@@ -19,7 +19,7 @@ class Clients extends Component {
 
         if (clients) {
             return (
-                <div>
+                <span>
                     <div className="row">
                         <div className="col-6">
                             <h2>
@@ -28,6 +28,7 @@ class Clients extends Component {
                         </div>
                         <div className="col-6" />
                     </div>
+                    
                     <table className="table table-striped table-responsive">
                         <thead className="thead inverse">
                             <tr>
@@ -53,7 +54,7 @@ class Clients extends Component {
 
 
 
-                </div>
+                </span>
             )
         }
         else {
