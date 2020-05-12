@@ -4,14 +4,14 @@ import Sidebar from '../layouts/Sidebar'
 
 function Dashboard() {
     return (
-        <div className="row">
-            <div className="col-10">
+        <span className="row">
+            <span className="col-10">
                 <Clients />
-            </div>
-            <div className="col-2">
+            </span>
+            <span className="col-2">
                 <Sidebar />
-            </div>
-        </div>
+            </span>
+        </span>
     )
 }
 
