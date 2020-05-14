@@ -30,9 +30,9 @@ class AddClient extends Component {
 
         return (
             <span>
-                <div className="row mb-3">
+                <div className="row mb-2">
                     <div className="col-6">
-                        <Link to="/" className="btn btn-secondary btn-sm">
+                        <Link to="/" className="btn btn-link">
                             <i className="fas fa-arrow-circle-left" /> Back
                         </Link>
                     </div>

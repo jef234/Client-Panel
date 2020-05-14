@@ -12,15 +12,15 @@ class Clients extends Component {
     }
 
     static getDerivedStateFromProps(props, state) {
-        const { clients } = props
-
-        if (clients) {
-            const total = clients.reduce((total, client) => {
-                return total + parseFloat(client.balance.toString())
-            }, 0)
-            return { totalOwed: total }
-        }
-        return null
+        if (props.clients !== state.clients) {
+            const { clients } = props
+            if (clients) {
+                const total = clients.reduce((total, client) => {
+                    return total + parseFloat(client.balance.toString())
+                }, 0)
+                return { totalOwed: total }
+            } return null
+        } return null
     }
 
     render() {
@@ -38,7 +38,7 @@ class Clients extends Component {
                         </div>
                         <div className="col-6">
                             <h5 className="text-right text-secondary">
-                                Total Owed: 
+                                Total Owed:
                                 <span className="text-primary">
                                     ${parseFloat(totalOwed).toFixed(2)}
                                 </span>
@@ -82,7 +82,7 @@ Clients.propTypes = {
 }
 
 export default compose(
-    firestoreConnect([{ collection: 'clients' }]),
+    firestoreConnect(props => [{ collection: 'clients' }]),
     connect((state, props) => ({
         clients: state.firestore.ordered.clients
     }))
