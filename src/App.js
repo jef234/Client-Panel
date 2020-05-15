@@ -8,6 +8,7 @@ import { ReactReduxFirebaseProvider} from 'react-redux-firebase'
 import AppNavbar from './components/layouts/AppNavbar'
 import Dashboard from './components/layouts/Dashboard'
 import AddClient from './components/clients/AddClient'
+import EditClient from './components/clients/EditClient'
 import ClientDetails from './components/clients/ClientDetails'
 
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Dashboard} />
               <Route exact path="/client/add" component={AddClient} />
+              <Route exact path="/client/edit/:id" component={EditClient} />
               <Route exact path="/client/:id" component={ClientDetails} />
             </Switch>
           </div>
