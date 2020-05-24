@@ -1,15 +1,17 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { UserIsAuthenticated, UserIsNotAuthenticated } from './components/helpers/auth'
 
 import { Provider } from 'react-redux'
-import {store, rrfProps} from './store'
-import { ReactReduxFirebaseProvider} from 'react-redux-firebase'
+import { store, rrfProps } from './store'
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
 
 import AppNavbar from './components/layouts/AppNavbar'
 import Dashboard from './components/layouts/Dashboard'
 import AddClient from './components/clients/AddClient'
 import EditClient from './components/clients/EditClient'
 import ClientDetails from './components/clients/ClientDetails'
+import Login from './components/auth/Login'
 
 import './App.css';
 
@@ -19,19 +21,20 @@ function App() {
   return (
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
-      <Router>
-        <div className="App">
-          <AppNavbar />
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={Dashboard} />
-              <Route exact path="/client/add" component={AddClient} />
-              <Route exact path="/client/edit/:id" component={EditClient} />
-              <Route exact path="/client/:id" component={ClientDetails} />
-            </Switch>
+        <Router>
+          <div className="App">
+            <AppNavbar />
+            <div className="container">
+              <Switch>
+                <Route exact path="/" component={UserIsAuthenticated(Dashboard)} />
+                <Route exact path="/client/add" component={UserIsAuthenticated(AddClient)} />
+                <Route exact path="/client/edit/:id" component={UserIsAuthenticated(EditClient)} />
+                <Route exact path="/client/:id" component={UserIsAuthenticated(ClientDetails)} />
+                <Route exact path="/login" component={UserIsNotAuthenticated(Login)} />
+              </Switch>
+            </div>
           </div>
-        </div>
-      </Router>
+        </Router>
       </ReactReduxFirebaseProvider>
     </Provider>
   );
