@@ -18,4 +18,4 @@ Password: Test@gmail.com
 ```npm run build```
 
 ### Publish
-```pm run deploy```
+```npm run deploy```
