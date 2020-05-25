@@ -39,12 +39,12 @@ class AppNavbar extends Component {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     {isAuthenticated ? (<React.Fragment>
-                        <ul className="navbar-nav mr-auto">
+                        <ul className="navbar-nav mr-auto" data-toggle="collapse" data-target="#navbarNav">
                             <li className="nav-item">
                                 <Link to="/" className="nav-link">Dashboard</Link>
                             </li>
                         </ul>
-                        <ul className="navbar-nav ml-auto">
+                        <ul className="navbar-nav ml-auto" data-toggle="collapse" data-target="#navbarNav">
                             <li className="nav-item">
                                 <span className="nav-link">{auth.email}</span>
                             </li>
@@ -59,7 +59,7 @@ class AppNavbar extends Component {
                     ) : null}
 
                     {allowRegistration && !isAuthenticated ? (
-                        <ul className="navbar-nav ml-auto">
+                        <ul className="navbar-nav ml-auto" data-toggle="collapse" data-target="#navbarNav">
                         <li className="nav-item">
                         <Link to="/Login" className="nav-link">Login</Link>
                         </li>
