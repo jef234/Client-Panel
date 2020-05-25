@@ -1,17 +1,24 @@
 Client Panel is a lightweight and responsive single page React web app using in Google Firebase.
 Users can add clients and maintain their financial balances. Data is store in firestore and retrieved as REST API service requests. States, Props, Routing, Authorization, Authentication, Settings linked to state and different Components are implemented in this project.
 
-Technologies: React, Firestore, Bootstrap, HTML and CSS.
+### Technologies 
+React, Firestore, Bootstrap, HTML and CSS.
 
-Websites:
-https://react-client-panel-9832d.web.app/
-https://jef234.github.io/Client-Panel/
+### Websites
+[Firebase](https://react-client-panel-9832d.web.app/) 
 
-Username:Test@gmail.com
-Password:Test@gmail.com
+[Github](https://jef234.github.io/Client-Panel/) 
 
-Install: npm install
+#### Username
+Test@gmail.com
+#### Password
+Test@gmail.com
 
-Build: npm build
+### Install
+```npm install```
 
-Publish: npm run deploy
+### Build
+```npm run build```
+
+### Publish
+```pm run deploy```
