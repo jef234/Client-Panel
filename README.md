@@ -14,6 +14,9 @@ Password: Test@gmail.com
 ### Install
 ```npm install```
 
+### Run
+```npm run start```
+
 ### Build
 ```npm run build```
 
