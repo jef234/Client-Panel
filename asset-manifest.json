@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/jef234/Client-Panel/static/css/main.5facb584.chunk.css",
-    "main.js": "/jef234/Client-Panel/static/js/main.d40cd26c.chunk.js",
-    "main.js.map": "/jef234/Client-Panel/static/js/main.d40cd26c.chunk.js.map",
-    "runtime-main.js": "/jef234/Client-Panel/static/js/runtime-main.fcce2ddd.js",
-    "runtime-main.js.map": "/jef234/Client-Panel/static/js/runtime-main.fcce2ddd.js.map",
-    "static/js/2.4bc6103c.chunk.js": "/jef234/Client-Panel/static/js/2.4bc6103c.chunk.js",
-    "static/js/2.4bc6103c.chunk.js.map": "/jef234/Client-Panel/static/js/2.4bc6103c.chunk.js.map",
-    "index.html": "/jef234/Client-Panel/index.html",
-    "precache-manifest.d70af49e47eebe266b2e36784219ee13.js": "/jef234/Client-Panel/precache-manifest.d70af49e47eebe266b2e36784219ee13.js",
-    "service-worker.js": "/jef234/Client-Panel/service-worker.js",
-    "static/css/main.5facb584.chunk.css.map": "/jef234/Client-Panel/static/css/main.5facb584.chunk.css.map",
-    "static/js/2.4bc6103c.chunk.js.LICENSE.txt": "/jef234/Client-Panel/static/js/2.4bc6103c.chunk.js.LICENSE.txt"
+    "main.css": "/Client-Panel/static/css/main.5facb584.chunk.css",
+    "main.js": "/Client-Panel/static/js/main.b527da51.chunk.js",
+    "main.js.map": "/Client-Panel/static/js/main.b527da51.chunk.js.map",
+    "runtime-main.js": "/Client-Panel/static/js/runtime-main.439aaa61.js",
+    "runtime-main.js.map": "/Client-Panel/static/js/runtime-main.439aaa61.js.map",
+    "static/js/2.5e01373a.chunk.js": "/Client-Panel/static/js/2.5e01373a.chunk.js",
+    "static/js/2.5e01373a.chunk.js.map": "/Client-Panel/static/js/2.5e01373a.chunk.js.map",
+    "index.html": "/Client-Panel/index.html",
+    "precache-manifest.21f0b04471ab45b74c02248f2db42d24.js": "/Client-Panel/precache-manifest.21f0b04471ab45b74c02248f2db42d24.js",
+    "service-worker.js": "/Client-Panel/service-worker.js",
+    "static/css/main.5facb584.chunk.css.map": "/Client-Panel/static/css/main.5facb584.chunk.css.map",
+    "static/js/2.5e01373a.chunk.js.LICENSE.txt": "/Client-Panel/static/js/2.5e01373a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fcce2ddd.js",
-    "static/js/2.4bc6103c.chunk.js",
+    "static/js/runtime-main.439aaa61.js",
+    "static/js/2.5e01373a.chunk.js",
     "static/css/main.5facb584.chunk.css",
-    "static/js/main.d40cd26c.chunk.js"
+    "static/js/main.b527da51.chunk.js"
   ]
 }
