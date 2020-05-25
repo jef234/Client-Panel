@@ -7,6 +7,9 @@ Websites:
 https://react-client-panel-9832d.web.app/
 https://jef234.github.io/Client-Panel/
 
+Username:Test@gmail.com
+Password:Test@gmail.com
+
 Install: npm install
 
 Build: npm build
