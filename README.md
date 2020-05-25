@@ -4,15 +4,12 @@ Users can add clients and maintain their financial balances. Data is store in fi
 ### Technologies 
 React, Firestore, Bootstrap, HTML and CSS.
 
-### Websites
+### App Hosted Websites
 [Firebase](https://react-client-panel-9832d.web.app/) 
-
 [Github](https://jef234.github.io/Client-Panel/) 
 
-#### Username
-Test@gmail.com
-#### Password
-Test@gmail.com
+Username: Test@gmail.com
+Password: Test@gmail.com
 
 ### Install
 ```npm install```
