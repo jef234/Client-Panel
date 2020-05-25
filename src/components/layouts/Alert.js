@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-
 const Alert = (props) => {
     const { message, messageType } = props
     return (
@@ -15,7 +14,8 @@ const Alert = (props) => {
 }
 Alert.propTypes = {
     message: PropTypes.string.isRequired,
-    messageType: PropTypes.string.isRequired
+    messageType: PropTypes.string.isRequired,
+    notifyUser:PropTypes.func.isRequired
 }
 
-export default Alert
+export default (Alert)

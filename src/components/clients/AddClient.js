@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 
 class AddClient extends Component {
@@ -20,14 +22,14 @@ class AddClient extends Component {
         const newClient = this.state
         const { firestore, history } = this.props
 
-        if(newClient.balance === '') newClient.balance = 0
+        if (newClient.balance === '') newClient.balance = 0
 
         firestore.add({ collection: 'clients' }, newClient).then(() => history.push('/'))
     }
 
     render() {
         let { firstName, lastName, email, phone, balance } = this.state
-
+        const { disableBalanceOnAdd } = this.props.settings
         return (
             <span>
                 <div className="row mb-2">
@@ -60,7 +62,7 @@ class AddClient extends Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="balance">Balance</label>
-                                <input type="text" className="form-control" name="balance" onChange={this.onChange} value={balance} />
+                                <input type="text" className="form-control" name="balance" onChange={this.onChange} value={balance} disabled={disableBalanceOnAdd}/>
                             </div>
                             <input type="submit" value="Submit" className="btn btn-primary btn-block" />
                         </form>
@@ -71,8 +73,14 @@ class AddClient extends Component {
     }
 }
 
-AddClient.prototypes ={
-    firestore: PropTypes.object.isRequired
+AddClient.prototypes = {
+    firestore: PropTypes.object.isRequired,
+    settings: PropTypes.object.isRequired
 }
 
-export default firestoreConnect()(AddClient)
+export default compose(
+    firestoreConnect(),
+    connect((state, props) => ({
+        settings: state.settings
+    }))
+)(AddClient)
