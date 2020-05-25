@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.5facb584.chunk.css",
-    "main.js": "/static/js/main.a2128691.chunk.js",
-    "main.js.map": "/static/js/main.a2128691.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d9ec14bc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d9ec14bc.js.map",
-    "static/js/2.adf698af.chunk.js": "/static/js/2.adf698af.chunk.js",
-    "static/js/2.adf698af.chunk.js.map": "/static/js/2.adf698af.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.acb1dce980192c1874f2cc0b42b38294.js": "/precache-manifest.acb1dce980192c1874f2cc0b42b38294.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5facb584.chunk.css.map": "/static/css/main.5facb584.chunk.css.map",
-    "static/js/2.adf698af.chunk.js.LICENSE.txt": "/static/js/2.adf698af.chunk.js.LICENSE.txt"
+    "main.css": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/css/main.5facb584.chunk.css",
+    "main.js": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/main.52861b1a.chunk.js",
+    "main.js.map": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/main.52861b1a.chunk.js.map",
+    "runtime-main.js": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/runtime-main.e966a4af.js",
+    "runtime-main.js.map": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/runtime-main.e966a4af.js.map",
+    "static/js/2.7390af2a.chunk.js": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/2.7390af2a.chunk.js",
+    "static/js/2.7390af2a.chunk.js.map": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/2.7390af2a.chunk.js.map",
+    "index.html": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/index.html",
+    "precache-manifest.07ba6a0bb5c4b191ded9aed11311cddc.js": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/precache-manifest.07ba6a0bb5c4b191ded9aed11311cddc.js",
+    "service-worker.js": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/service-worker.js",
+    "static/css/main.5facb584.chunk.css.map": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/css/main.5facb584.chunk.css.map",
+    "static/js/2.7390af2a.chunk.js.LICENSE.txt": "/Client-Panel/%20&&%20https://react-client-panel-9832d.web.app/static/js/2.7390af2a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d9ec14bc.js",
-    "static/js/2.adf698af.chunk.js",
+    "static/js/runtime-main.e966a4af.js",
+    "static/js/2.7390af2a.chunk.js",
     "static/css/main.5facb584.chunk.css",
-    "static/js/main.a2128691.chunk.js"
+    "static/js/main.52861b1a.chunk.js"
   ]
 }
